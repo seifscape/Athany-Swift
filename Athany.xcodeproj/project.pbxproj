@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17E240C38B33203F7C81AD47 /* Pods_AthanyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1E69ADB870715ECA707A8B /* Pods_AthanyUITests.framework */; };
+		18766A5FAC8BC443B1DE23D4 /* Pods_Athany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98784F0FABFCA740FD3F676 /* Pods_Athany.framework */; };
+		23F11BDB65FD09C51E921727 /* Pods_AthanyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AAC6699FCD5DEB6BC51062 /* Pods_AthanyTests.framework */; };
+		285B76A12579822D00E9D3B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B76A02579822D00E9D3B0 /* AppDelegate.swift */; };
+		285B76A32579822D00E9D3B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B76A22579822D00E9D3B0 /* SceneDelegate.swift */; };
+		285B76A52579822D00E9D3B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B76A42579822D00E9D3B0 /* ViewController.swift */; };
+		285B76AB2579822D00E9D3B0 /* Athany.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 285B76A92579822D00E9D3B0 /* Athany.xcdatamodeld */; };
+		285B76AD2579822F00E9D3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285B76AC2579822F00E9D3B0 /* Assets.xcassets */; };
+		285B76B02579822F00E9D3B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285B76AE2579822F00E9D3B0 /* LaunchScreen.storyboard */; };
+		285B76BB2579823000E9D3B0 /* AthanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B76BA2579823000E9D3B0 /* AthanyTests.swift */; };
+		285B76C62579823000E9D3B0 /* AthanyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B76C52579823000E9D3B0 /* AthanyUITests.swift */; };
+		285B76DD257982F800E9D3B0 /* AthanyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B76DC257982F800E9D3B0 /* AthanyTabBarController.swift */; };
+		28899AEC25BA380D000BFFB1 /* AthanyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28899AEB25BA380D000BFFB1 /* AthanyConfig.swift */; };
+		2896DF1225AF6CA8006F1C46 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */; };
+		289E4FFB25AF98AF00D712AB /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E4FFA25AF98AF00D712AB /* PrayerTableViewCell.swift */; };
+		28C8F62A25B2368900AEF11A /* PrayerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8F62925B2368900AEF11A /* PrayerHeaderView.swift */; };
+		28F6A262265D62E900EC15C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		285B76B72579823000E9D3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 285B76952579822D00E9D3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 285B769C2579822D00E9D3B0;
+			remoteInfo = "Rahma Prayer";
+		};
+		285B76C22579823000E9D3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 285B76952579822D00E9D3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 285B769C2579822D00E9D3B0;
+			remoteInfo = "Rahma Prayer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16BE3EBC4FD4828516E31AB1 /* Pods-AthanyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AthanyUITests.release.xcconfig"; path = "Target Support Files/Pods-AthanyUITests/Pods-AthanyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		21B381DCBF558F80D1FADC58 /* Pods-Rahma PrayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rahma PrayerUITests.release.xcconfig"; path = "Target Support Files/Pods-Rahma PrayerUITests/Pods-Rahma PrayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2803C0C46B376D428020D261 /* Pods-Athany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athany.release.xcconfig"; path = "Target Support Files/Pods-Athany/Pods-Athany.release.xcconfig"; sourceTree = "<group>"; };
+		285B769D2579822D00E9D3B0 /* Athany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Athany.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		285B76A02579822D00E9D3B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		285B76A22579822D00E9D3B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		285B76A42579822D00E9D3B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		285B76AA2579822D00E9D3B0 /* Rahma_Prayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rahma_Prayer.xcdatamodel; sourceTree = "<group>"; };
+		285B76AC2579822F00E9D3B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		285B76AF2579822F00E9D3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		285B76B12579822F00E9D3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285B76B62579823000E9D3B0 /* AthanyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthanyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		285B76BA2579823000E9D3B0 /* AthanyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanyTests.swift; sourceTree = "<group>"; };
+		285B76BC2579823000E9D3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285B76C12579823000E9D3B0 /* AthanyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthanyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		285B76C52579823000E9D3B0 /* AthanyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanyUITests.swift; sourceTree = "<group>"; };
+		285B76C72579823000E9D3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285B76DC257982F800E9D3B0 /* AthanyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanyTabBarController.swift; sourceTree = "<group>"; };
+		28899AE625BA377C000BFFB1 /* UserDefaultHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelpers.swift; sourceTree = "<group>"; };
+		28899AEB25BA380D000BFFB1 /* AthanyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanyConfig.swift; sourceTree = "<group>"; };
+		2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
+		289E4FFA25AF98AF00D712AB /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
+		28C8F62925B2368900AEF11A /* PrayerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHeaderView.swift; sourceTree = "<group>"; };
+		28F5AD9525AD08C100A93105 /* PrayerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSettingsViewController.swift; sourceTree = "<group>"; };
+		28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		31AAC6699FCD5DEB6BC51062 /* Pods_AthanyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AthanyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1E69ADB870715ECA707A8B /* Pods_AthanyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AthanyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D29B08E6F1200A06CA9F69C /* Pods-Rahma PrayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rahma PrayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rahma PrayerUITests/Pods-Rahma PrayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		838DC1B4DBD28C73DCEA61D9 /* Pods-AthanyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AthanyUITests.debug.xcconfig"; path = "Target Support Files/Pods-AthanyUITests/Pods-AthanyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8EBC01E2C310C60D226B30E6 /* Pods-Rahma PrayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rahma PrayerTests.release.xcconfig"; path = "Target Support Files/Pods-Rahma PrayerTests/Pods-Rahma PrayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F974B582ED94A2F93A14401 /* Pods-AthanyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AthanyTests.debug.xcconfig"; path = "Target Support Files/Pods-AthanyTests/Pods-AthanyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A58E47B0073DA256F6D6F829 /* Pods-Rahma Prayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rahma Prayer.release.xcconfig"; path = "Target Support Files/Pods-Rahma Prayer/Pods-Rahma Prayer.release.xcconfig"; sourceTree = "<group>"; };
+		B30EDC5BFAFE1898B971BA09 /* Pods-Rahma Prayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rahma Prayer.debug.xcconfig"; path = "Target Support Files/Pods-Rahma Prayer/Pods-Rahma Prayer.debug.xcconfig"; sourceTree = "<group>"; };
+		C0655CFF57E2015E5C942806 /* Pods-Rahma PrayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rahma PrayerTests.debug.xcconfig"; path = "Target Support Files/Pods-Rahma PrayerTests/Pods-Rahma PrayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCADD1E38AEF1BD83F75B186 /* Pods-Athany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athany.debug.xcconfig"; path = "Target Support Files/Pods-Athany/Pods-Athany.debug.xcconfig"; sourceTree = "<group>"; };
+		E98784F0FABFCA740FD3F676 /* Pods_Athany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0C18D9D88750E909EEEDC85 /* Pods-AthanyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AthanyTests.release.xcconfig"; path = "Target Support Files/Pods-AthanyTests/Pods-AthanyTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		285B769A2579822D00E9D3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18766A5FAC8BC443B1DE23D4 /* Pods_Athany.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285B76B32579823000E9D3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F11BDB65FD09C51E921727 /* Pods_AthanyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285B76BE2579823000E9D3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E240C38B33203F7C81AD47 /* Pods_AthanyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		285B76942579822D00E9D3B0 = {
+			isa = PBXGroup;
+			children = (
+				285B769F2579822D00E9D3B0 /* Athany */,
+				285B76B92579823000E9D3B0 /* Athany PrayerTests */,
+				285B76C42579823000E9D3B0 /* Athany PrayerUITests */,
+				285B769E2579822D00E9D3B0 /* Products */,
+				C1B0FB61E521164950F56837 /* Pods */,
+				BE55C1B594A4BAF98B686431 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		285B769E2579822D00E9D3B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				285B769D2579822D00E9D3B0 /* Athany.app */,
+				285B76B62579823000E9D3B0 /* AthanyTests.xctest */,
+				285B76C12579823000E9D3B0 /* AthanyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		285B769F2579822D00E9D3B0 /* Athany */ = {
+			isa = PBXGroup;
+			children = (
+				28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */,
+				28F6A260265C3C5400EC15C6 /* Controllers */,
+				289E4FF925AF981E00D712AB /* Views */,
+				2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */,
+				285B76A02579822D00E9D3B0 /* AppDelegate.swift */,
+				285B76A22579822D00E9D3B0 /* SceneDelegate.swift */,
+				285B76A42579822D00E9D3B0 /* ViewController.swift */,
+				28F5AD9525AD08C100A93105 /* PrayerSettingsViewController.swift */,
+				285B76AC2579822F00E9D3B0 /* Assets.xcassets */,
+				285B76AE2579822F00E9D3B0 /* LaunchScreen.storyboard */,
+				285B76B12579822F00E9D3B0 /* Info.plist */,
+				285B76A92579822D00E9D3B0 /* Athany.xcdatamodeld */,
+				285B76DC257982F800E9D3B0 /* AthanyTabBarController.swift */,
+				28899AE625BA377C000BFFB1 /* UserDefaultHelpers.swift */,
+				28899AEB25BA380D000BFFB1 /* AthanyConfig.swift */,
+			);
+			path = Athany;
+			sourceTree = "<group>";
+		};
+		285B76B92579823000E9D3B0 /* Athany PrayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				285B76BA2579823000E9D3B0 /* AthanyTests.swift */,
+				285B76BC2579823000E9D3B0 /* Info.plist */,
+			);
+			path = "Athany PrayerTests";
+			sourceTree = "<group>";
+		};
+		285B76C42579823000E9D3B0 /* Athany PrayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				285B76C52579823000E9D3B0 /* AthanyUITests.swift */,
+				285B76C72579823000E9D3B0 /* Info.plist */,
+			);
+			path = "Athany PrayerUITests";
+			sourceTree = "<group>";
+		};
+		289E4FF925AF981E00D712AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				289E4FFA25AF98AF00D712AB /* PrayerTableViewCell.swift */,
+				28C8F62925B2368900AEF11A /* PrayerHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		28F6A260265C3C5400EC15C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE55C1B594A4BAF98B686431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E98784F0FABFCA740FD3F676 /* Pods_Athany.framework */,
+				31AAC6699FCD5DEB6BC51062 /* Pods_AthanyTests.framework */,
+				3D1E69ADB870715ECA707A8B /* Pods_AthanyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1B0FB61E521164950F56837 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B30EDC5BFAFE1898B971BA09 /* Pods-Rahma Prayer.debug.xcconfig */,
+				A58E47B0073DA256F6D6F829 /* Pods-Rahma Prayer.release.xcconfig */,
+				C0655CFF57E2015E5C942806 /* Pods-Rahma PrayerTests.debug.xcconfig */,
+				8EBC01E2C310C60D226B30E6 /* Pods-Rahma PrayerTests.release.xcconfig */,
+				7D29B08E6F1200A06CA9F69C /* Pods-Rahma PrayerUITests.debug.xcconfig */,
+				21B381DCBF558F80D1FADC58 /* Pods-Rahma PrayerUITests.release.xcconfig */,
+				CCADD1E38AEF1BD83F75B186 /* Pods-Athany.debug.xcconfig */,
+				2803C0C46B376D428020D261 /* Pods-Athany.release.xcconfig */,
+				8F974B582ED94A2F93A14401 /* Pods-AthanyTests.debug.xcconfig */,
+				F0C18D9D88750E909EEEDC85 /* Pods-AthanyTests.release.xcconfig */,
+				838DC1B4DBD28C73DCEA61D9 /* Pods-AthanyUITests.debug.xcconfig */,
+				16BE3EBC4FD4828516E31AB1 /* Pods-AthanyUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		285B769C2579822D00E9D3B0 /* Athany */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285B76CA2579823000E9D3B0 /* Build configuration list for PBXNativeTarget "Athany" */;
+			buildPhases = (
+				8492C07477173DC938936C55 /* [CP] Check Pods Manifest.lock */,
+				285B76992579822D00E9D3B0 /* Sources */,
+				285B769A2579822D00E9D3B0 /* Frameworks */,
+				285B769B2579822D00E9D3B0 /* Resources */,
+				098E54AE4F979BF657B6BF6E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Athany;
+			productName = "Rahma Prayer";
+			productReference = 285B769D2579822D00E9D3B0 /* Athany.app */;
+			productType = "com.apple.product-type.application";
+		};
+		285B76B52579823000E9D3B0 /* AthanyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285B76CD2579823000E9D3B0 /* Build configuration list for PBXNativeTarget "AthanyTests" */;
+			buildPhases = (
+				A85C7A45639794943EBCB71E /* [CP] Check Pods Manifest.lock */,
+				285B76B22579823000E9D3B0 /* Sources */,
+				285B76B32579823000E9D3B0 /* Frameworks */,
+				285B76B42579823000E9D3B0 /* Resources */,
+				611F80A930A8251209618B19 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				285B76B82579823000E9D3B0 /* PBXTargetDependency */,
+			);
+			name = AthanyTests;
+			productName = "Rahma PrayerTests";
+			productReference = 285B76B62579823000E9D3B0 /* AthanyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		285B76C02579823000E9D3B0 /* AthanyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285B76D02579823000E9D3B0 /* Build configuration list for PBXNativeTarget "AthanyUITests" */;
+			buildPhases = (
+				867C5ADC1DE4FEA84AB7FE3A /* [CP] Check Pods Manifest.lock */,
+				285B76BD2579823000E9D3B0 /* Sources */,
+				285B76BE2579823000E9D3B0 /* Frameworks */,
+				285B76BF2579823000E9D3B0 /* Resources */,
+				9FE85F8EF6F1EEA65F38E90B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				285B76C32579823000E9D3B0 /* PBXTargetDependency */,
+			);
+			name = AthanyUITests;
+			productName = "Rahma PrayerUITests";
+			productReference = 285B76C12579823000E9D3B0 /* AthanyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		285B76952579822D00E9D3B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					285B769C2579822D00E9D3B0 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					285B76B52579823000E9D3B0 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 285B769C2579822D00E9D3B0;
+					};
+					285B76C02579823000E9D3B0 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 285B769C2579822D00E9D3B0;
+					};
+				};
+			};
+			buildConfigurationList = 285B76982579822D00E9D3B0 /* Build configuration list for PBXProject "Athany" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 285B76942579822D00E9D3B0;
+			productRefGroup = 285B769E2579822D00E9D3B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				285B769C2579822D00E9D3B0 /* Athany */,
+				285B76B52579823000E9D3B0 /* AthanyTests */,
+				285B76C02579823000E9D3B0 /* AthanyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		285B769B2579822D00E9D3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285B76B02579822F00E9D3B0 /* LaunchScreen.storyboard in Resources */,
+				285B76AD2579822F00E9D3B0 /* Assets.xcassets in Resources */,
+				28F6A262265D62E900EC15C6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285B76B42579823000E9D3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285B76BF2579823000E9D3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		098E54AE4F979BF657B6BF6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Athany/Pods-Athany-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Athany/Pods-Athany-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Athany/Pods-Athany-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		611F80A930A8251209618B19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthanyTests/Pods-AthanyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthanyTests/Pods-AthanyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AthanyTests/Pods-AthanyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8492C07477173DC938936C55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Athany-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867C5ADC1DE4FEA84AB7FE3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AthanyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FE85F8EF6F1EEA65F38E90B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthanyUITests/Pods-AthanyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthanyUITests/Pods-AthanyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AthanyUITests/Pods-AthanyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A85C7A45639794943EBCB71E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AthanyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		285B76992579822D00E9D3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28899AEC25BA380D000BFFB1 /* AthanyConfig.swift in Sources */,
+				28C8F62A25B2368900AEF11A /* PrayerHeaderView.swift in Sources */,
+				285B76AB2579822D00E9D3B0 /* Athany.xcdatamodeld in Sources */,
+				285B76A52579822D00E9D3B0 /* ViewController.swift in Sources */,
+				285B76A12579822D00E9D3B0 /* AppDelegate.swift in Sources */,
+				289E4FFB25AF98AF00D712AB /* PrayerTableViewCell.swift in Sources */,
+				285B76A32579822D00E9D3B0 /* SceneDelegate.swift in Sources */,
+				2896DF1225AF6CA8006F1C46 /* FirstLaunchViewController.swift in Sources */,
+				285B76DD257982F800E9D3B0 /* AthanyTabBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285B76B22579823000E9D3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285B76BB2579823000E9D3B0 /* AthanyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285B76BD2579823000E9D3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285B76C62579823000E9D3B0 /* AthanyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		285B76B82579823000E9D3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 285B769C2579822D00E9D3B0 /* Athany */;
+			targetProxy = 285B76B72579823000E9D3B0 /* PBXContainerItemProxy */;
+		};
+		285B76C32579823000E9D3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 285B769C2579822D00E9D3B0 /* Athany */;
+			targetProxy = 285B76C22579823000E9D3B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		285B76AE2579822F00E9D3B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				285B76AF2579822F00E9D3B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		285B76C82579823000E9D3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		285B76C92579823000E9D3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		285B76CB2579823000E9D3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCADD1E38AEF1BD83F75B186 /* Pods-Athany.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KEXMK3QR;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = Athany/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptitudelabs.athany;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		285B76CC2579823000E9D3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2803C0C46B376D428020D261 /* Pods-Athany.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KEXMK3QR;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = Athany/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptitudelabs.athany;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		285B76CE2579823000E9D3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F974B582ED94A2F93A14401 /* Pods-AthanyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KEXMK3QR;
+				INFOPLIST_FILE = AthanyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptitudelabs.AthanyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athany.app/Athany";
+			};
+			name = Debug;
+		};
+		285B76CF2579823000E9D3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0C18D9D88750E909EEEDC85 /* Pods-AthanyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KEXMK3QR;
+				INFOPLIST_FILE = AthanyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptitudelabs.AthanyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athany.app/Athany";
+			};
+			name = Release;
+		};
+		285B76D12579823000E9D3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838DC1B4DBD28C73DCEA61D9 /* Pods-AthanyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KEXMK3QR;
+				INFOPLIST_FILE = AthanyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptitudelabs.AthanyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Athany;
+			};
+			name = Debug;
+		};
+		285B76D22579823000E9D3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16BE3EBC4FD4828516E31AB1 /* Pods-AthanyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KEXMK3QR;
+				INFOPLIST_FILE = AthanyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptitudelabs.AthanyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Athany;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		285B76982579822D00E9D3B0 /* Build configuration list for PBXProject "Athany" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285B76C82579823000E9D3B0 /* Debug */,
+				285B76C92579823000E9D3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		285B76CA2579823000E9D3B0 /* Build configuration list for PBXNativeTarget "Athany" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285B76CB2579823000E9D3B0 /* Debug */,
+				285B76CC2579823000E9D3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		285B76CD2579823000E9D3B0 /* Build configuration list for PBXNativeTarget "AthanyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285B76CE2579823000E9D3B0 /* Debug */,
+				285B76CF2579823000E9D3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		285B76D02579823000E9D3B0 /* Build configuration list for PBXNativeTarget "AthanyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285B76D12579823000E9D3B0 /* Debug */,
+				285B76D22579823000E9D3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		285B76A92579822D00E9D3B0 /* Athany.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				285B76AA2579822D00E9D3B0 /* Rahma_Prayer.xcdatamodel */,
+			);
+			currentVersion = 285B76AA2579822D00E9D3B0 /* Rahma_Prayer.xcdatamodel */;
+			path = Athany.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 285B76952579822D00E9D3B0 /* Project object */;
+}
