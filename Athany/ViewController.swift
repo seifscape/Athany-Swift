@@ -15,8 +15,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var safeArea: UILayoutGuide!
     var timer: Timer!
     var nextPrayer:Date!
-
-
+    
+    
     var prayers:PrayerTimes? {
         didSet {
             self.tableView.reloadData()
@@ -37,10 +37,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.setupTableView()
         setupPrayerTimes()
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UpdateTime), userInfo: nil, repeats: true) // Repeat "func Update() " every second and update the label
-
+        
         // Do any additional setup after loading the view.
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(settingsTapped))
-
+        
         
         if #available(iOS 11.0, *) {
             self.tableView.insetsContentViewsToSafeArea = false;
@@ -52,62 +52,74 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     @objc func UpdateTime() {
-            let userCalendar = Calendar.current
-            // Set Current Date
-            let date = Date()
-            let components = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: date)
-            let currentDate = userCalendar.date(from: components)!
-            
-            
-            let futureComponents = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: nextPrayer)
-            let eventDate = userCalendar.date(from: futureComponents)
+        let userCalendar = Calendar.current
+        // Set Current Date
+        let date = Date()
+        let components = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: date)
+        let currentDate = userCalendar.date(from: components)!
         
-
-                
-            // Change the seconds to days, hours, minutes and seconds
+        let futureComponents = userCalendar.dateComponents([.hour, .minute, .month, .year, .day, .second], from: nextPrayer)
+        let eventDate = userCalendar.date(from: futureComponents)
+        
+        // Change the seconds to days, hours, minutes and seconds
         let timeLeft = userCalendar.dateComponents([.day, .hour, .minute, .second], from: currentDate, to: eventDate!)
-            
-            // Display Countdown
-        headerView.nextPrayerCounterLabel.text = "\(timeLeft.hour!)h \(timeLeft.minute!)m \(timeLeft.second!)s"
-            
-            // Show diffrent text when the event has passed
-        endEvent(currentdate: currentDate, eventdate: eventDate!)
-        }
         
-        func endEvent(currentdate: Date, eventdate: Date) {
-            if currentdate >= eventdate {
-                // Stop Timer
-                timer.invalidate()
-                if let nextPrayerUnwrapped = prayers?.nextPrayer() {
-        //            let formatter = DateFormatter()
-                    nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
-                    timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UpdateTime), userInfo: nil, repeats: true) // Repeat "func Update() " every second and update the label
-
-                }
+        // Display Countdown
+        headerView.nextPrayerCounterLabel.text = "\(timeLeft.hour!)h \(timeLeft.minute!)m \(timeLeft.second!)s"
+        
+        // Show diffrent text when the event has passed
+        endEvent(currentdate: currentDate, eventdate: eventDate!)
+    }
+    
+    func endEvent(currentdate: Date, eventdate: Date) {
+        if currentdate >= eventdate {
+            // Stop Timer
+            timer.invalidate()
+            if let nextPrayerUnwrapped = prayers?.nextPrayer() {
+                //            let formatter = DateFormatter()
+                nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
+                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UpdateTime), userInfo: nil, repeats: true) // Repeat "func Update() " every second and update the label
+                
             }
         }
+    }
     
     
     func setupPrayerTimes() {
         let coordinates = Coordinates(latitude: 38.8816, longitude: -77.0910)
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
+        
+        let now = Calendar.current.dateComponents(in: .current, from: Date())
         let date = cal.dateComponents([.year, .month, .day], from: Date())
+
+        let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
+        //let dateTomorrow = Calendar.current.date(from: tomorrow)!
+
+        
         var params = CalculationMethod.northAmerica.params
         params.madhab = .hanafi
+        
         prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
-//        if let nextPrayerUnwrapped = prayers?.currentPrayer(at: Date()) {
-//            nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
-//        }
+        
         if let nextPrayerUnwrapped = prayers?.nextPrayer() {
             nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
         }
+        else {
+            prayers = PrayerTimes(coordinates: coordinates, date: tomorrow, calculationParameters: params)
+            nextPrayer = (prayers?.time(for: (prayers?.nextPrayer())!))
+        }
+ 
+        
+//        if let nextPrayerUnwrapped = prayers?.currentPrayer(at: Date()) {
+//            nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
+//        }
     }
     
     @objc
@@ -186,9 +198,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         default:
             cell.prayerTime.text = "nil"
         }
-            return cell
+        return cell
     }
-
+    
     func setupTableView() {
         view.addSubview(headerView)
         view.addSubview(tableView)
@@ -199,30 +211,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         headerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         headerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        headerView.bottomAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
-//        headerView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //        headerView.bottomAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
+        //        headerView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         headerView.heightAnchor.constraint(equalToConstant: 240).isActive = true
         
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
-//        tableView.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //        tableView.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32.0).isActive = true
-//        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120.0).isActive = true
-//        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32.0).isActive = true
-//        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32.0).isActive = true
-
+        //        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32.0).isActive = true
+        //        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120.0).isActive = true
+        //        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32.0).isActive = true
+        //        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32.0).isActive = true
         
         
-//      tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-//      tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-//      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//      tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        //      tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+        //      tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        //      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        //      tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
-
+    
 }
 
 extension Date {
@@ -230,7 +242,7 @@ extension Date {
         let nowUTC = Date()
         let timeZoneOffset = Double(TimeZone.current.secondsFromGMT(for: nowUTC))
         guard let localDate = Calendar.current.date(byAdding: .second, value: Int(timeZoneOffset), to: nowUTC) else {return Date()}
-
+        
         return localDate
     }
 }
