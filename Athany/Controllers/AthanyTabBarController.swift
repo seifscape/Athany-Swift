@@ -11,7 +11,7 @@ class AthanyTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstViewController = ViewController()
+        let firstViewController = NewViewController()
                 
 //        firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
 

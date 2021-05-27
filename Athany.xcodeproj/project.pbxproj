@@ -22,6 +22,8 @@
 		28899AEC25BA380D000BFFB1 /* AthanyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28899AEB25BA380D000BFFB1 /* AthanyConfig.swift */; };
 		2896DF1225AF6CA8006F1C46 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */; };
 		289E4FFB25AF98AF00D712AB /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E4FFA25AF98AF00D712AB /* PrayerTableViewCell.swift */; };
+		28B839A2265DEFCE001C257D /* PrayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B839A1265DEFCE001C257D /* PrayerCollectionViewCell.swift */; };
+		28B839A4265DF3D0001C257D /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B839A3265DF3D0001C257D /* NewViewController.swift */; };
 		28C8F62A25B2368900AEF11A /* PrayerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8F62925B2368900AEF11A /* PrayerHeaderView.swift */; };
 		28F6A262265D62E900EC15C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		28899AEB25BA380D000BFFB1 /* AthanyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanyConfig.swift; sourceTree = "<group>"; };
 		2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		289E4FFA25AF98AF00D712AB /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
+		28B839A1265DEFCE001C257D /* PrayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		28B839A3265DF3D0001C257D /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		28C8F62925B2368900AEF11A /* PrayerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHeaderView.swift; sourceTree = "<group>"; };
 		28F5AD9525AD08C100A93105 /* PrayerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSettingsViewController.swift; sourceTree = "<group>"; };
 		28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -136,19 +140,15 @@
 		285B769F2579822D00E9D3B0 /* Athany */ = {
 			isa = PBXGroup;
 			children = (
-				28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */,
+				28B839A0265DEED7001C257D /* Assets */,
 				28F6A260265C3C5400EC15C6 /* Controllers */,
 				289E4FF925AF981E00D712AB /* Views */,
-				2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */,
 				285B76A02579822D00E9D3B0 /* AppDelegate.swift */,
 				285B76A22579822D00E9D3B0 /* SceneDelegate.swift */,
-				285B76A42579822D00E9D3B0 /* ViewController.swift */,
-				28F5AD9525AD08C100A93105 /* PrayerSettingsViewController.swift */,
 				285B76AC2579822F00E9D3B0 /* Assets.xcassets */,
 				285B76AE2579822F00E9D3B0 /* LaunchScreen.storyboard */,
 				285B76B12579822F00E9D3B0 /* Info.plist */,
 				285B76A92579822D00E9D3B0 /* Athany.xcdatamodeld */,
-				285B76DC257982F800E9D3B0 /* AthanyTabBarController.swift */,
 				28899AE625BA377C000BFFB1 /* UserDefaultHelpers.swift */,
 				28899AEB25BA380D000BFFB1 /* AthanyConfig.swift */,
 			);
@@ -178,13 +178,27 @@
 			children = (
 				289E4FFA25AF98AF00D712AB /* PrayerTableViewCell.swift */,
 				28C8F62925B2368900AEF11A /* PrayerHeaderView.swift */,
+				28B839A1265DEFCE001C257D /* PrayerCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		28B839A0265DEED7001C257D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		28F6A260265C3C5400EC15C6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				285B76DC257982F800E9D3B0 /* AthanyTabBarController.swift */,
+				2896DF1125AF6CA8006F1C46 /* FirstLaunchViewController.swift */,
+				285B76A42579822D00E9D3B0 /* ViewController.swift */,
+				28F5AD9525AD08C100A93105 /* PrayerSettingsViewController.swift */,
+				28B839A3265DF3D0001C257D /* NewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -476,8 +490,10 @@
 			files = (
 				28899AEC25BA380D000BFFB1 /* AthanyConfig.swift in Sources */,
 				28C8F62A25B2368900AEF11A /* PrayerHeaderView.swift in Sources */,
+				28B839A2265DEFCE001C257D /* PrayerCollectionViewCell.swift in Sources */,
 				285B76AB2579822D00E9D3B0 /* Athany.xcdatamodeld in Sources */,
 				285B76A52579822D00E9D3B0 /* ViewController.swift in Sources */,
+				28B839A4265DF3D0001C257D /* NewViewController.swift in Sources */,
 				285B76A12579822D00E9D3B0 /* AppDelegate.swift in Sources */,
 				289E4FFB25AF98AF00D712AB /* PrayerTableViewCell.swift in Sources */,
 				285B76A32579822D00E9D3B0 /* SceneDelegate.swift in Sources */,

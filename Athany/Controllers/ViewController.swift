@@ -8,7 +8,7 @@
 import UIKit
 import Adhan
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     fileprivate let headerView = PrayerHeaderView()
     fileprivate let tableView = UITableView()
@@ -58,6 +58,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+
+    func setupPrayerTimes() {
+        let coordinates = Coordinates(latitude: 38.8816, longitude: -77.0910)
+        let cal = Calendar(identifier: Calendar.Identifier.gregorian)
+        
+        let now = Calendar.current.dateComponents(in: .current, from: Date())
+        let date = cal.dateComponents([.year, .month, .day], from: Date())
+
+        let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
+        //let dateTomorrow = Calendar.current.date(from: tomorrow)!
+
+        
+        var params = CalculationMethod.northAmerica.params
+        params.madhab = .hanafi
+        
+        prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
+        
+        if let nextPrayerUnwrapped = prayers?.nextPrayer() {
+            nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
+        }
+        else {
+            prayers = PrayerTimes(coordinates: coordinates, date: tomorrow, calculationParameters: params)
+            nextPrayer = (prayers?.time(for: (prayers?.nextPrayer())!))
+        }
+    }
+    
     @objc func UpdateTime() {
         let userCalendar = Calendar.current
         // Set Current Date
@@ -91,41 +117,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    
-    func setupPrayerTimes() {
-        let coordinates = Coordinates(latitude: 38.8816, longitude: -77.0910)
-        let cal = Calendar(identifier: Calendar.Identifier.gregorian)
-        
-        let now = Calendar.current.dateComponents(in: .current, from: Date())
-        let date = cal.dateComponents([.year, .month, .day], from: Date())
-
-        let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
-        //let dateTomorrow = Calendar.current.date(from: tomorrow)!
-
-        
-        var params = CalculationMethod.northAmerica.params
-        params.madhab = .hanafi
-        
-        prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
-        
-        if let nextPrayerUnwrapped = prayers?.nextPrayer() {
-            nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
-        }
-        else {
-            prayers = PrayerTimes(coordinates: coordinates, date: tomorrow, calculationParameters: params)
-            nextPrayer = (prayers?.time(for: (prayers?.nextPrayer())!))
-        }
- 
-        
-//        if let nextPrayerUnwrapped = prayers?.currentPrayer(at: Date()) {
-//            nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
-//        }
-    }
-    
-    @objc
-    func settingsTapped() {
+    @objc func settingsTapped() {
         print("right bar button action")
     }
+        
+    func setupTableView() {
+        view.addSubview(headerView)
+        view.addSubview(tableView)
+        tableView.clipsToBounds = true
+        tableView.layer.cornerRadius = 10.0
+        headerView.backgroundColor = .lightGray
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        headerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        headerView.bottomAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
+//        headerView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
+//        tableView.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32.0).isActive = true
+//        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120.0).isActive = true
+//        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32.0).isActive = true
+//        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32.0).isActive = true
+
+
+
+//      tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+//      tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+//      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//      tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+    }
+    
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
@@ -200,41 +230,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         return cell
     }
-    
-    func setupTableView() {
-        view.addSubview(headerView)
-        view.addSubview(tableView)
-        tableView.clipsToBounds = true
-        tableView.layer.cornerRadius = 10.0
-        headerView.backgroundColor = .lightGray
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        headerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        //        headerView.bottomAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
-        //        headerView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        headerView.heightAnchor.constraint(equalToConstant: 240).isActive = true
-        
-        
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
-        //        tableView.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        //        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32.0).isActive = true
-        //        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120.0).isActive = true
-        //        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32.0).isActive = true
-        //        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32.0).isActive = true
-        
-        
-        
-        //      tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        //      tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        //      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        //      tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-    }
-    
+
 }
 
 extension Date {
@@ -246,3 +242,4 @@ extension Date {
         return localDate
     }
 }
+
