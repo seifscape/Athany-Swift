@@ -58,6 +58,11 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
 
     func setupPrayerTimes() {
         let coordinates = Coordinates(latitude: 38.8816, longitude: -77.0910)

@@ -14,8 +14,7 @@ def apps_shared_pods
     pod 'Firebase/Analytics'
 end
 
-target "Athany" do
-   source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git'
+target "Athany" do	
    source 'https://cdn.cocoapods.org/'
    apps_shared_pods
 end

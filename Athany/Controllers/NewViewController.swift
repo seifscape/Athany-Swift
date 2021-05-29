@@ -13,6 +13,7 @@ class NewViewController: UIViewController {
     fileprivate let headerView = PrayerHeaderView()
     var safeArea: UILayoutGuide!
     var timer: Timer!
+    var tomorrowPrayer:Date!
     var nextPrayer:Date!
     
     fileprivate let collectionView:UICollectionView = {
@@ -22,12 +23,17 @@ class NewViewController: UIViewController {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register( PrayerCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         cv.backgroundColor = .white
-        cv.contentInset = UIEdgeInsets(top: 10,left: 0,bottom: 10,right: 0)
+        cv.contentInset = UIEdgeInsets(top: 20,left: 0,bottom: 10,right: 0)
         return cv
     }()
 
     
     
+    var tomorrowPrayers:PrayerTimes? {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     var prayers:PrayerTimes? {
         didSet {
@@ -59,6 +65,11 @@ class NewViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(settingsTapped))
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -80,7 +91,6 @@ class NewViewController: UIViewController {
         let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1)
         //let dateTomorrow = Calendar.current.date(from: tomorrow)!
 
-        
         var params = CalculationMethod.northAmerica.params
         params.madhab = .hanafi
         
@@ -89,9 +99,10 @@ class NewViewController: UIViewController {
         if let nextPrayerUnwrapped = prayers?.nextPrayer() {
             nextPrayer = (prayers?.time(for: nextPrayerUnwrapped))!
         }
+        // Tomorrow
         else {
-            prayers = PrayerTimes(coordinates: coordinates, date: tomorrow, calculationParameters: params)
-            nextPrayer = (prayers?.time(for: (prayers?.nextPrayer())!))
+            tomorrowPrayers = PrayerTimes(coordinates: coordinates, date: tomorrow, calculationParameters: params)
+            nextPrayer = tomorrowPrayers?.time(for: .fajr)
         }
     }
     
@@ -217,12 +228,7 @@ extension NewViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         case 5:
             cell.prayerTitle.text = "Isha"
             cell.prayerTime.text = formatter.string(from: prayers!.isha)
-            if Date() > prayers!.isha {
-                cell.isUserInteractionEnabled = false
-                cell.prayerTitle.isEnabled = false
-                cell.prayerTime.isEnabled = false
-                cell.athanButton.isEnabled = false
-            }
+
         default:
             cell.prayerTime.text = "nil"
         }
