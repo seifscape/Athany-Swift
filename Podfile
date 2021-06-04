@@ -12,6 +12,7 @@ def apps_shared_pods
     pod 'Adhan'
     pod 'SwiftyBeaver'
     pod 'Firebase/Analytics'
+    pod 'Firebase/Crashlytics'
 end
 
 target "Athany" do	

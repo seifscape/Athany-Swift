@@ -140,6 +140,7 @@
 		285B769F2579822D00E9D3B0 /* Athany */ = {
 			isa = PBXGroup;
 			children = (
+				28D6CD88266AE040003AA6D7 /* Managers */,
 				28B839A0265DEED7001C257D /* Assets */,
 				28F6A260265C3C5400EC15C6 /* Controllers */,
 				289E4FF925AF981E00D712AB /* Views */,
@@ -189,6 +190,13 @@
 				28F6A261265D62E900EC15C6 /* GoogleService-Info.plist */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		28D6CD88266AE040003AA6D7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		28F6A260265C3C5400EC15C6 /* Controllers */ = {
